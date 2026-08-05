@@ -1,7 +1,7 @@
 baseURL = "https://chengyiyu125.github.io/"
 languageCode = "zh‑CN"
 title = "小鱼斋"
-theme = "paper"
+theme = "PaperMod"
 
 [params]
 author = "维垣"
