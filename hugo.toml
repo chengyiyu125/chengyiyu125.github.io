@@ -1,0 +1,16 @@
+baseURL = "https://xiaoyuzhai.vercel.app/"
+languageCode = "zh‑CN"
+title = "小鱼斋"
+theme = "paper"
+
+[params]
+author = "维垣"
+description = "闲人草"
+color = "linen"    # linen米黄 / wheat暖黄 / gray冷灰 / light纯白，可换
+
+rss = true
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+genre = "genres"
