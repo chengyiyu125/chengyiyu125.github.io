@@ -1,0 +1,76 @@
+{{ define "main" }}
+    <main class="main" role="main" style="max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem;">
+        {{/* 从配置中读取 Profile 参数 */}}
+        {{ $profile := .Site.Params.profileMode }}
+        {{ if $profile.enabled }}
+            <div class="profile-container" style="text-align: center; padding: 1rem 0 2rem 0;">
+                {{/* 头像：在标题正上方 */}}
+                {{ if $profile.imageUrl }}
+                    <img src="{{ $profile.imageUrl | absURL }}" alt="avatar" 
+                         style="width: {{ $profile.imageWidth | default 150 }}px; 
+                                height: {{ $profile.imageHeight | default 150 }}px; 
+                                border-radius: 50%; object-fit: cover; 
+                                margin-bottom: 0.8rem;
+                                display: block; margin-left: auto; margin-right: auto;" />
+                {{ end }}
+                
+                {{/* 标题：紧挨着头像下方 */}}
+                {{ if $profile.title }}
+                    <h1 style="font-family: 'Noto Serif SC', serif; font-size: 2.5rem; margin-top: 0; margin-bottom: 0.3rem; color: var(--primary); letter-spacing: 0.1em;">
+                        {{ $profile.title }}
+                    </h1>
+                {{ end }}
+                
+                {{/* 副标题（支持 Markdown） */}}
+                {{ if $profile.subtitle }}
+                    <div style="font-family: 'Noto Serif SC', serif; font-size: 1.2rem; color: var(--secondary); 
+                                letter-spacing: 0.1em; max-width: 600px; margin: 0 auto; font-style: italic;">
+                        {{ $profile.subtitle | .RenderString }}
+                    </div>
+                {{ end }}
+                
+                {{/* 按钮（如果有） */}}
+                {{ if $profile.buttons }}
+                    <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        {{ range $profile.buttons }}
+                            <a href="{{ .url | absLangURL }}" 
+                               style="padding: 0.5rem 1.5rem; border: 1px solid var(--border); 
+                                      border-radius: 30px; color: var(--primary); text-decoration: none;
+                                      transition: all 0.3s; background: var(--entry);">
+                                {{ .name }}
+                            </a>
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
+
+        {{/* 文章列表：全部内容 + 分页，删除first3限制 */}}
+        <div class="post-content" style="margin-top: 0.5rem; padding: 0 0.5rem;">
+            {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+            {{ $pages = $pages.ByDate.Reverse }}
+            {{ $paginator := .Paginate $pages }}
+
+            {{ range $paginator.Pages }}
+                <article class="post-entry" style="padding: 1rem 1rem; border-bottom: 1px solid var(--border); border-left: 1px solid var(--border); border-right: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.5rem; background: var(--entry);">
+                    <header class="entry-header">
+                        <h2 style="font-size: 1.3rem; margin: 0;">
+                            <a href="{{ .RelPermalink }}" style="color: var(--primary); text-decoration: none;">
+                                {{ .Title }}
+                            </a>
+                        </h2>
+                    </header>
+                    <div class="entry-content" style="font-size: 0.9rem; color: var(--secondary); margin-top: 0.2rem;">
+                        <p>{{ .Summary | plainify | truncate 100 }}</p>
+                    </div>
+                    <footer class="entry-footer" style="font-size: 0.8rem; color: var(--secondary);">
+                        <span>{{ .Date.Format "2006-01-02" }}</span>
+                    </footer>
+                </article>
+            {{ end }}
+
+            {{/* Hugo内置分页导航（上一页/下一页） */}}
+            {{ template "_internal/pagination.html" . }}
+        </div>
+    </main>
+{{ end }}

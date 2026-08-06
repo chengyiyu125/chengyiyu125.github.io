@@ -1,16 +1,58 @@
 baseURL = "https://chengyiyu125.github.io/"
-languageCode = "zh‑CN"
+locale = "zh-CN"
 title = "小鱼斋"
 theme = "PaperMod"
+
+paginate = 10
+paginatePath = "page"
 
 [params]
 author = "维垣"
 description = "闲人草"
-color = "linen"    # linen米黄 / wheat暖黄 / gray冷灰 / light纯白，可换
-
+color = "linen"
 rss = true
+ShowToc = true
+ShowMenuItems = true
+# 关闭首页“查看更多”按钮，解决404
+homeInfoParams = { ShowMore = false }
+mainSections = ["poetry", "booknotes", "essays"]
+
+[params.profileMode]
+enabled = true
+title = "维垣"
+subtitle = "我到青山今是客，他年应与白云归。"
+imageUrl = "img/profile.jpg"
+imageWidth = 150
+imageHeight = 150
 
 [taxonomies]
 category = "categories"
 tag = "tags"
 genre = "genres"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[[menu.main]]
+identifier = "search"
+name = "搜索"
+url = "/search/"
+weight = 10
+
+[[menu.main]]
+identifier = "poetry"
+name = "诗词"
+url = "/poetry/"
+weight = 20
+
+[[menu.main]]
+identifier = "booknotes"
+name = "读书笔记"
+url = "/booknotes/"
+weight = 21
+
+[[menu.main]]
+identifier = "essays"
+name = "随笔"
+url = "/essays/"
+weight = 22

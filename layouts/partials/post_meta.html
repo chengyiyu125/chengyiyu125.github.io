@@ -1,0 +1,64 @@
+{{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
+{{- $dateHuman := .Date | time.Format ":date_long" -}}
+
+<div class="post-meta">
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+
+    {{/* 分类链接 categories */}}
+    {{ with .Params.categories }}
+    <span class="meta-sep">·</span>
+    <span class="meta-item">
+        {{ range $index, $cat := . }}
+            {{ if $index }} / {{ end }}
+            <a href="{{ "categories/" | relLangURL }}{{ $cat | urlize }}/" class="meta-link">{{ $cat }}</a>
+        {{ end }}
+    </span>
+    {{ end }}
+
+    {{/* 系列 genres */}}
+    {{ with .Params.genres }}
+    <span class="meta-sep">·</span>
+    <span class="meta-item">📁
+        {{ range $index, $g := . }}
+            {{ if $index }} / {{ end }}
+            <a href="{{ "genres/" | relLangURL }}{{ $g | urlize }}/" class="meta-link">{{ $g }}</a>
+        {{ end }}
+    </span>
+    {{ end }}
+
+    {{/* 标签链接 tags */}}
+    {{ with .Params.tags }}
+    <span class="meta-sep">·</span>
+    <span class="meta-item">
+        {{ range $index, $tag := . }}
+            {{ if $index }} / {{ end }}
+            <a href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}/" class="meta-link">#{{ $tag }}</a>
+        {{ end }}
+    </span>
+    {{ end }}
+</div>
+
+<style>
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    margin-bottom: 1.2rem;
+}
+.meta-link {
+    color: var(--secondary);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--border);
+}
+.meta-link:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+.meta-sep {
+    color: var(--secondary);
+    opacity: 0.7;
+}
+</style>
