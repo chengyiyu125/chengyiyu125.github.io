@@ -1,5 +1,5 @@
 baseURL = "https://chengyiyu125.github.io/"
-locale = "zh-CN"
+locale = "zh-cn"                    # 小写
 title = "小鱼斋"
 theme = "PaperMod"
 
@@ -13,6 +13,10 @@ color = "linen"
 rss = true
 ShowToc = true
 ShowMenuItems = true
+ShowBreadCrumbs = true
+ShowReadingTime = true                # 显示预计阅读时间
+ShowWordCount = true
+ShowPostNavLinks = true
 # 关闭首页“查看更多”按钮，解决404
 homeInfoParams = { ShowMore = false }
 mainSections = ["poetry", "booknotes", "essays"]
@@ -56,3 +60,9 @@ identifier = "essays"
 name = "随笔"
 url = "/essays/"
 weight = 22
+
+[[menu.main]]
+identifier = "tags"
+name = "标签"
+url = "/tags/"
+weight = 23

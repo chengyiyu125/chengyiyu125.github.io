@@ -4,7 +4,19 @@
 <div class="post-meta">
     <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
-    {{/* 分类链接 categories */}}
+    {{/* 阅读时间 */}}
+    {{ if .Site.Params.ShowReadingTime }}
+    <span class="meta-sep">·</span>
+    <span class="meta-item">{{ .ReadingTime }} 分钟阅读</span>
+    {{ end }}
+
+    {{/* 字数：使用 countrunes 准确统计中文字符数 */}}
+    {{ if .Site.Params.ShowWordCount }}
+    <span class="meta-sep">·</span>
+    <span class="meta-item">{{ .Content | plainify | countrunes }} 字</span>
+    {{ end }}
+
+    {{/* 分类、系列、标签（保持不变） */}}
     {{ with .Params.categories }}
     <span class="meta-sep">·</span>
     <span class="meta-item">
@@ -15,7 +27,6 @@
     </span>
     {{ end }}
 
-    {{/* 系列 genres */}}
     {{ with .Params.genres }}
     <span class="meta-sep">·</span>
     <span class="meta-item">📁
@@ -26,7 +37,6 @@
     </span>
     {{ end }}
 
-    {{/* 标签链接 tags */}}
     {{ with .Params.tags }}
     <span class="meta-sep">·</span>
     <span class="meta-item">
