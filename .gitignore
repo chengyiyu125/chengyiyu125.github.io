@@ -1,0 +1,17 @@
+# Hugo 生成的静态网站文件夹（绝对不要提交）
+/public/
+
+# Hugo 缓存文件夹（如果有的话）
+/resources/
+
+# Hugo 构建时生成的临时统计文件
+/hugo_stats.json
+
+# hugo锁文件
+/.hugo_build.lock
+
+# 系统垃圾
+.DS_Store
+.vscode/
+.idea/
+*.swp
