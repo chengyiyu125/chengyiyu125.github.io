@@ -3,27 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-08-06T17:06:48+08:00</lastmod>
+    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/genres/</loc>
-    <lastmod>2026-08-06T17:06:48+08:00</lastmod>
+    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-08-06T17:06:48+08:00</lastmod>
+    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/</loc>
+    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/poetry/%E9%97%B2%E4%BA%BA%E8%8D%89/</loc>
+    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%B8%80%E4%B8%83%E5%89%8D/</loc>
     <lastmod>2026-08-06T17:06:48+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-08-06T17:06:48+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/poetry/%E5%B0%91%E5%B9%B4%E9%9B%86/</loc>
-    <lastmod>2026-08-06T17:06:48+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/</loc>
-    <lastmod>2026-08-06T17:06:48+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E8%AF%97%E8%AF%8D/</loc>
     <lastmod>2026-08-06T17:06:48+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%BA%94/</loc>
@@ -84,5 +90,7 @@
     <lastmod>2026-08-05T17:50:47+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
+  </url><url>
+    <loc>http://localhost:1313/archives/</loc>
   </url>
 </urlset>
