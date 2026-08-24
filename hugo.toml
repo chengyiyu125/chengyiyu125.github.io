@@ -2,9 +2,12 @@ baseURL = "https://www.xiaoyuzhai.com/"
 locale = "zh-cn"                    # 小写
 title = "小鱼斋"
 theme = "PaperMod"
-
 paginate = 10
 paginatePath = "page"
+
+# 允许markdown内的html标签（<small>等）渲染生效
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
 author = "维垣"
@@ -20,6 +23,8 @@ ShowPostNavLinks = true
 # 关闭首页“查看更多”按钮，解决404
 homeInfoParams = { ShowMore = false }
 mainSections = ["poetry", "booknotes", "essays"]
+# 加载自定义css，用于微调<small>注释字号
+customCSS = [ "css/custom.css" ]
 
 [params.profileMode]
 enabled = true

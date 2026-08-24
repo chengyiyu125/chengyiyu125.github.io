@@ -72,3 +72,10 @@ border: 1px solid var (--border);
 hr {
 border-color: var (--border);
 }
+
+/* 块引用内古籍小字注释 */
+blockquote small {
+    font-size: 0.82em;
+    color: var(--secondary);
+    opacity: 0.88;
+}
