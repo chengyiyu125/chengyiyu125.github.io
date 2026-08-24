@@ -3,24 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+    <lastmod>2026-08-24T16:21:21+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/genres/</loc>
-    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+    <lastmod>2026-08-24T16:21:21+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/</loc>
-    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+    <lastmod>2026-08-24T16:21:21+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+    <lastmod>2026-08-24T16:21:21+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/poetry/%E6%99%B4%E9%9B%A8%E5%BE%8C%E4%BD%9C/</loc>
+    <lastmod>2026-08-24T16:21:21+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/</loc>
-    <lastmod>2026-08-08T10:33:48+08:00</lastmod>
+    <lastmod>2026-08-24T16:21:21+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/genres/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2026-08-24T16:21:21+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2026-08-24T16:21:21+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/</loc>
     <lastmod>2026-08-08T10:33:48+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/poetry/%E9%97%B2%E4%BA%BA%E8%8D%89/</loc>
@@ -70,6 +76,12 @@
   </url><url>
     <loc>http://localhost:1313/essays/</loc>
     <lastmod>2026-08-06T16:00:23+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E9%9B%B6/</loc>
+    <lastmod>2026-08-06T15:17:31+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/poetry/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E9%9B%B6/</loc>
+    <lastmod>2026-08-06T15:17:31+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%B8%80%E4%B9%9D/</loc>
     <lastmod>2026-08-06T15:09:06+08:00</lastmod>
