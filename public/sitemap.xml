@@ -3,21 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-09-12T10:52:17+08:00</lastmod>
+    <lastmod>2026-09-26T10:38:47+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/genres/</loc>
-    <lastmod>2026-09-12T10:52:17+08:00</lastmod>
+    <lastmod>2026-09-26T10:38:47+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-09-12T10:52:17+08:00</lastmod>
+    <lastmod>2026-09-26T10:38:47+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/poetry/%E4%B8%AD%E7%A7%8B%E5%8D%B3%E4%BA%8B/</loc>
+    <lastmod>2026-09-26T10:38:47+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/</loc>
+    <lastmod>2026-09-26T10:38:47+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-09-26T10:38:47+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2026-09-26T10:38:47+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2026-09-26T10:38:47+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/genres/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/</loc>
     <lastmod>2026-09-12T10:52:17+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2026-09-12T10:52:17+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-09-12T10:52:17+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/booknotes/%E8%81%BD%E9%9B%AA%E8%A9%9E/</loc>
@@ -28,15 +40,6 @@
   </url><url>
     <loc>http://localhost:1313/booknotes/%E6%9F%B3%E5%A6%82%E6%98%AF%E5%B0%BA%E7%89%8D/</loc>
     <lastmod>2026-09-11T10:51:19+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/</loc>
-    <lastmod>2026-09-03T16:09:31+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/</loc>
-    <lastmod>2026-09-03T16:09:31+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E8%AF%97%E8%AF%8D/</loc>
-    <lastmod>2026-09-03T16:09:31+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/poetry/%E9%9B%9C%E8%A9%A9/</loc>
     <lastmod>2026-09-03T16:09:31+08:00</lastmod>
