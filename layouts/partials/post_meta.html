@@ -4,16 +4,22 @@
 <div class="post-meta">
     <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
-    {{/* 阅读时间 */}}
+    {{/* 字数：使用 countrunes 准确统计中文字符数 */}}
+    {{- $chars := .Content | plainify | countrunes -}}
+
+    {{/* 阅读时间：Hugo 默认按“单词”计算，中文无空格会导致永远显示 1 分钟，
+         故改为按字数 ÷ 阅读速度（默认 400 字/分钟，见 hugo.toml params.readingSpeed）*/}}
     {{ if .Site.Params.ShowReadingTime }}
+    {{- $speed := .Site.Params.readingSpeed | default 400 -}}
+    {{- $mins := math.Ceil (div (float $chars) (float $speed)) -}}
+    {{- if lt $mins 1 }}{{ $mins = 1 }}{{ end -}}
     <span class="meta-sep">·</span>
-    <span class="meta-item">{{ .ReadingTime }} 分钟阅读</span>
+    <span class="meta-item">约 {{ int $mins }} 分钟阅读</span>
     {{ end }}
 
-    {{/* 字数：使用 countrunes 准确统计中文字符数 */}}
     {{ if .Site.Params.ShowWordCount }}
     <span class="meta-sep">·</span>
-    <span class="meta-item">{{ .Content | plainify | countrunes }} 字</span>
+    <span class="meta-item">{{ $chars }} 字</span>
     {{ end }}
 
     {{/* 分类、系列、标签（保持不变） */}}
