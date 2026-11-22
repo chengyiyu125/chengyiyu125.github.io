@@ -3,24 +3,24 @@
 --primary: #2c2c2c;
 --secondary: #5c5c5c;
 --content: #2b2b2b;
---bg: #f8f5ec; /* 宣纸米白底色 */
---theme: #f8f5ec; /* 顶栏、页脚跟随纸色，避免出现白条 */
---entry: #fffbf2;
---border: #d8d2c2;
+--bg: #ffffff; /* 纯白底，不用纸色 */
+--theme: #ffffff; /* 顶栏、页脚与背景同色 */
+--entry: #ffffff;
+--border: #e6e6e6;
 --link: #8c3d2b; /* 赭石红链接 */
---hljs-bg: #f3efe3;
+--hljs-bg: #f6f6f6;
 }
-/* 暗色模式 古纸深色调：主题用的是 [data-theme="dark"]，不是 .dark */
+/* 暗色模式：主题用的是 [data-theme="dark"]，不是 .dark */
 [data-theme="dark"] {
---primary: #e2dfd2;
---secondary: #b8b4a6;
---content: #e8e4d6;
---bg: #1c1b18;
---theme: #1c1b18;
---entry: #272622;
---border: #44413a;
+--primary: #e6e6e6;
+--secondary: #b0b0b0;
+--content: #e4e4e4;
+--bg: #1b1b1b;
+--theme: #1b1b1b;
+--entry: #262626;
+--border: #3a3a3a;
 --link: #d48b6a;
---hljs-bg: #2a2824;
+--hljs-bg: #262626;
 }
 /* 全局字体：思源宋体，中式阅读，优先系统备选 */
 body {
@@ -41,10 +41,10 @@ max-width: 1000px;
 font-family: "Noto Serif SC", serif;
 font-weight: 600;
 }
-/* 引用块｜仿古笺 */
+/* 引用块｜素笺 */
 .post-content blockquote {
-border-left: 3px solid #a67c52;
-background: rgba(166, 124, 82, 0.06);
+border-left: 3px solid #d9d9d9;
+background: rgba(0, 0, 0, 0.025);
 padding: 0.8rem 1rem;
 }
 /* 图片样式，淡水墨圆角阴影 */
@@ -55,7 +55,7 @@ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
 /* 链接样式，细下划线 */
 .post-content a {
 text-decoration: none;
-border-bottom: 1px solid #c4a88c;
+border-bottom: 1px solid #d5d5d5;
 }
 .post-content a:hover {
 border-bottom: 1px solid var(--link);
@@ -70,7 +70,7 @@ border-radius: 6px;
 background-color: var(--entry);
 border: 1px solid var(--border);
 }
-/* 分割线改成古铜色细线条 */
+/* 分割线：细浅线条 */
 hr {
 border-color: var(--border);
 }
