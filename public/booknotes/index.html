@@ -1,154 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>读书笔记 | 小鱼斋</title>
-<meta name="keywords" content="">
-<meta name="description" content="读书笔记 - 小鱼斋">
-<meta name="author" content="维垣">
-<link rel="canonical" href="http://localhost:1313/booknotes/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b0da92bd6b069c0d38e969abb612881b73f9470c1f23f4f97cee193577b89b46.css" integrity="sha256-sNqSvWsGnA046WmrthKIG3P5RwwfI/T5fO4ZNXe4m0Y=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/booknotes/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/booknotes/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-</head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="header-nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="小鱼斋 (Alt + H)">小鱼斋</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu" class="menu">
-            <li>
-                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
-                    <span>搜索</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/poetry/" title="诗词">
-                    <span>诗词</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/booknotes/" title="读书笔记">
-                    <span class="active">读书笔记</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/essays/" title="随笔">
-                    <span>随笔</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/archives/" title="时间轴">
-                    <span>时间轴</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-</nav>
-  <h1>
-    读书笔记
-  </h1>
-</header>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">聽雪詞
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>聽雪詞 琴川歸懋儀佩珊譔
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>读书笔记 | 小鱼斋</title><meta name=keywords content><meta name=description content="读书笔记 - 小鱼斋"><meta name=author content="维垣"><link rel=canonical href=https://www.xiaoyuzhai.com/booknotes/><link crossorigin=anonymous href=/assets/css/stylesheet.07489d054f623aa68faa8e5290e425ff68638f8632ed41acd818f86d3eb52bc2.css integrity="sha256-B0idBU9iOqaPqo5SkOQl/2hjj4Yy7UGs2Bj4bT61K8I=" rel="preload stylesheet" as=style><link rel=icon href=https://www.xiaoyuzhai.com/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://www.xiaoyuzhai.com/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://www.xiaoyuzhai.com/favicon-32x32.png><link rel=apple-touch-icon href=https://www.xiaoyuzhai.com/apple-touch-icon.png><link rel=mask-icon href=https://www.xiaoyuzhai.com/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://www.xiaoyuzhai.com/booknotes/index.xml title=rss><link rel=alternate hreflang=en href=https://www.xiaoyuzhai.com/booknotes/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="https://www.xiaoyuzhai.com/booknotes/"><meta property="og:site_name" content="小鱼斋"><meta property="og:title" content="读书笔记"><meta property="og:description" content="闲人草"><meta property="og:locale" content="zh_cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="读书笔记"><meta name=twitter:description content="闲人草"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"读书笔记","item":"https://www.xiaoyuzhai.com/booknotes/"}]}</script></head><body class=list id=top><header class=header><nav class=header-nav><div class=logo><a href=https://www.xiaoyuzhai.com/ accesskey=h title="小鱼斋 (Alt + H)">小鱼斋</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=https://www.xiaoyuzhai.com/search/ title="搜索 (Alt + /)" accesskey=/><span>搜索</span></a></li><li><a href=https://www.xiaoyuzhai.com/poetry/ title=诗词><span>诗词</span></a></li><li><a href=https://www.xiaoyuzhai.com/booknotes/ title=读书笔记><span class=active>读书笔记</span></a></li><li><a href=https://www.xiaoyuzhai.com/essays/ title=随笔><span>随笔</span></a></li><li><a href=https://www.xiaoyuzhai.com/tags/ title=标签><span>标签</span></a></li><li><a href=https://www.xiaoyuzhai.com/archives/ title=时间轴><span>时间轴</span></a></li></ul></nav></header><main class=main><header class=page-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=/>Home</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></nav><h1>读书笔记</h1></header><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>聽雪詞</h2></header><div class=entry-content><p>聽雪詞 琴川歸懋儀佩珊譔
 彙刻閨秀詞：清光緒時期徐氏小檀欒室刊本
 念奴嬌·贈綠春夫人 空山流水，悄無言、領略美人幽意。一片聰明冰雪淨，吹到芳香滿紙。倩月摹神，裁雲作稿，喚得靈均起。風生懷袖，感君珍重緘寄。
 遙想雅袌孤貞，清芬難閟，終作騷人佩。眉月初三新有樣，筆蘸春山濃翠。蘭韻偏清，蕙心是素，永結雙頭蕊。憐卿南郡，玉臺佳話同紀。
@@ -191,90 +44,18 @@
 金縷曲·新涼 海國秋生早。向晚來、瀟瀟疏雨，濛濛斜照。不耐羅衣涼似水，彈指中元過了。添一種、悲秋懷抱。往事淒涼頻入㝱，㝱回時、徹夜蟲聲鬧。鐙焰小，窗紙曉。
 愁來窗下翻殘稿。感知音、般般憐惜，同心同調。天半龍門高許入，也算三生修到。□到此、閒愁都埽。準備花前聯雅集，算良辰、只有中秋好。金縷奏，玉尊倒。
 探春令 疏鐙一點閃窗櫺，觸萬千情緒。憶前宵、聽啞啞學語。猶伴我、唫詩句。
-明珠入掌留難住。乳燕辭巢去。恍嗁聲、在耳霎時分，散㝱也、無尋處。
-</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-09-12T10:52:17&#43;08:00">September 12, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">2366 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="meta-link">读书笔记</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/" class="meta-link">古籍整理</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/" class="meta-link">#古籍整理</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 聽雪詞" href="http://localhost:1313/booknotes/%E8%81%BD%E9%9B%AA%E8%A9%9E/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">柳如是尺牍
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>小引 余昔寄跡西湖，每見然明拾翠芳堤，偎紅畫舫，徜羊山水間，儼黄於豪客。時倡和有女史纖郎，人多艶之。再十年，余歸三山，然明寄視畫卷，知西泠結伴，有畫中人楊雲友，人多妒之。今復出懷中一瓣香，以柳如是尺牘寄余索叙。琅琅數千言，艶過六朝，情深班蔡。人多奇之。然明神情不倦，處禪室以致散花，行江皋而解環珮。再十年，繼三詩畫史而出者，又不知爲何人。總添入西湖一段佳话，余且幸附名千載云。三山林雪天素書于翠雨閣
+明珠入掌留難住。乳燕辭巢去。恍嗁聲、在耳霎時分，散㝱也、無尋處。</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-09-12T10:52:17+08:00>September 12, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 6 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>2366 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ class=meta-link>读书笔记</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/ class=meta-link>古籍整理</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/ class=meta-link>#古籍整理</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 聽雪詞" href=https://www.xiaoyuzhai.com/booknotes/%E8%81%BD%E9%9B%AA%E8%A9%9E/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>柳如是尺牍</h2></header><div class=entry-content><p>小引 余昔寄跡西湖，每見然明拾翠芳堤，偎紅畫舫，徜羊山水間，儼黄於豪客。時倡和有女史纖郎，人多艶之。再十年，余歸三山，然明寄視畫卷，知西泠結伴，有畫中人楊雲友，人多妒之。今復出懷中一瓣香，以柳如是尺牘寄余索叙。琅琅數千言，艶過六朝，情深班蔡。人多奇之。然明神情不倦，處禪室以致散花，行江皋而解環珮。再十年，繼三詩畫史而出者，又不知爲何人。總添入西湖一段佳话，余且幸附名千載云。三山林雪天素書于翠雨閣
 一 湖上直是武陵溪，此直是桂栋药房矣。非先生用意之深，不止于此。感甚！感甚！寄怀之同，乃梦寐有愫耳。古人云：千里犹比邻，殆不虚也。廿一之订，一如台命。
 二 早來佳麗若此，又读先生大章，覺五夜風雨悽然者，正不關風物也。羈紅恨碧，使人益不勝情耳。少頃，當成一詩呈教。明日欲借尊舫，一向西泠兩峰，餘俱心感。
 三 泣蕙草之飄零，憐佳人之遲暮，自非綿麗之筆，恐不能與于此。然以雲友之寸，先生之俠，使我輩即極無文，亦不可不作。客俟一荒山煙雨之中，直當痛哭成之可耳。
@@ -305,162 +86,19 @@
 廿八 弟之歸故山也，本謂吹笛露橋，聞簫月榭。乃至錦瑟瑶笙，已作畫簷蛛網。日望淒涼，徒兹綿麗。所以未及遵剡棹，而行踪已在六橋煙水間矣。已至湖湄，知先生尚滯故里。又以横山幽崎，不減赤城，遂懷尚平之意。不意甫入山後，纏綿夙疾，委頓至今。近聞先生已歸，幸即垂視。山中最爲麗矚，除藥爐禪榻之外，即松風桂渚。若覿良規，便爲情景俱勝。讀孔璋之檄，未可知也。伏枕草草，不悉。
 廿九 弟抱疴禾城，已纏月紀，及歸山閣，㡬至弥留。見遮須之尊，忘波旬之怖，不意太山有生肌之賜，賈鵬空煩勞之務。今雖華鬘少除，而尼連未浴；邈邈之懷，未卜清邁。何期明河，又讀鱗問耶？弟即日觀濤廣陵，聆音震澤。先生又以尚禽之事未畢，既不能晤之晚香，或當期之仙舫也。某公作用，亦大異賭墅風流矣。將來湖湄鱖魚如絲，林葉正頳。其爲延結，何可言喻。
 卅 嗣音遥阻，頓及蕭晨。時依朔風，禹臺黯結。弟小草以來，如飄絲霧，黍谷之月，遂躡虞山。南宫主人，倒屣見知，羊公謝傅，觀兹非邈。彼聞先生與馮雲將有意北行，相望良久。何謂二仲尚渺洄溯。弟方耽遊蠟屐，或至閣梅梁雪，彦會可懷。不爾，則春王伊邇，薄遊在斯。當偕某翁便過通德，一景道風也。耑此修候，不既。
-卅一 尺素之至，甚感相存。知虞山别後，已過夷門，延津之合，豈漫然耶？此翁氣誼，誠如來教。重以盛心，引眎明愷。顧慚菲薄，何以自竭。惟有什襲斯言，與懷俱永耳。武夷之遊，聞在旦夕，雜佩之義，於心闕然。當俟越槖云歸，或相賀于虞山也。應答小言，已分嗤棄，何悟見賞通人，使之成帙。非先生意深，應不及此。特有遠投，更須數本，得飛槳見貽，爲感！非渺諸惠，謝謝。四箑草完，不盡。
-</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-09-11T10:51:19&#43;08:00">September 11, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">3406 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="meta-link">读书笔记</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/" class="meta-link">古籍整理</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/" class="meta-link">#古籍整理</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 柳如是尺牍" href="http://localhost:1313/booknotes/%E6%9F%B3%E5%A6%82%E6%98%AF%E5%B0%BA%E7%89%8D/"></a>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">小鱼斋</a></span> · 
-
-    
-    
-    <span>
-        Powered by
-        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
-        <polyline points="17 11 12 6 7 11"></polyline>
-        <polyline points="17 18 12 13 7 18"></polyline>
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var toplink = document.getElementById("top-link");
-    window.onscroll = function () {
-        const scrollThreshold = window.innerHeight;
-        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-            toplink.classList.remove("hidden");
-        } else {
-            toplink.classList.add("hidden");
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+卅一 尺素之至，甚感相存。知虞山别後，已過夷門，延津之合，豈漫然耶？此翁氣誼，誠如來教。重以盛心，引眎明愷。顧慚菲薄，何以自竭。惟有什襲斯言，與懷俱永耳。武夷之遊，聞在旦夕，雜佩之義，於心闕然。當俟越槖云歸，或相賀于虞山也。應答小言，已分嗤棄，何悟見賞通人，使之成帙。非先生意深，應不及此。特有遠投，更須數本，得飛槳見貽，爲感！非渺諸惠，謝謝。四箑草完，不盡。</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-09-11T10:51:19+08:00>September 11, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 9 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>3406 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/ class=meta-link>读书笔记</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/ class=meta-link>古籍整理</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E5%8F%A4%E7%B1%8D%E6%95%B4%E7%90%86/ class=meta-link>#古籍整理</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 柳如是尺牍" href=https://www.xiaoyuzhai.com/booknotes/%E6%9F%B3%E5%A6%82%E6%98%AF%E5%B0%BA%E7%89%8D/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://www.xiaoyuzhai.com/>小鱼斋</a></span> ·
+<span>Powered by
+<a href="https://gohugo.io/?utm_source=papermod" rel=noopener target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link");window.onscroll=function(){const e=window.innerHeight;document.body.scrollTop>e||document.documentElement.scrollTop>e?toplink.classList.remove("hidden"):toplink.classList.add("hidden")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>

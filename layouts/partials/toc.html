@@ -1,10 +1,22 @@
 {{- $headers := findRE "<h[1-6].*?>(.|\\n)+?</h[1-6]>" .Content -}}
 {{- $has_headers := ge (len $headers) 1 -}}
 {{- if $has_headers -}}
-<div class="toc">
+<nav class="toc-side" aria-label="目录">
 <details>
     <summary>目录</summary>
     {{- .TableOfContents }}
 </details>
-</div>
+</nav>
+<script>
+    /* 宽屏时目录固定在正文左侧留白，默认展开；窄屏仍为可折叠块 */
+    (function () {
+        var nav = document.currentScript.previousElementSibling;
+        var box = nav && nav.querySelector("details");
+        if (!box) return;
+        var mq = window.matchMedia("(min-width: 1280px)");
+        var sync = function () { if (mq.matches) box.open = true; };
+        sync();
+        if (mq.addEventListener) mq.addEventListener("change", sync);
+    })();
+</script>
 {{- end }}

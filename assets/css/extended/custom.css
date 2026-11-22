@@ -79,3 +79,112 @@ blockquote small {
     color: var(--secondary);
     opacity: 0.88;
 }
+
+/* ===== 目录：宽屏移到正文左侧留白，不占版面宽度 ===== */
+.toc-side {
+    margin-bottom: 20px;
+}
+.toc-side details {
+    background: var(--code-bg, #f3efe3);
+    border: 1px solid var(--border, #d8d2c2);
+    border-radius: 8px;
+    padding: 0.2rem 0.4rem 0.45rem;
+}
+.toc-side summary {
+    display: block;
+    list-style: none;
+    cursor: pointer;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.9rem;
+    color: var(--secondary, #5c5c5c);
+    letter-spacing: 0.14em;
+    user-select: none;
+}
+.toc-side summary::-webkit-details-marker {
+    display: none;
+}
+.toc-side summary::marker {
+    content: "";
+}
+/* 折叠三角只在窄屏（版面内目录）出现，宽屏侧边栏不需要 */
+@media (max-width: 1279.98px) {
+    .toc-side summary::before {
+        content: "▸ ";
+    }
+    .toc-side details[open] summary::before {
+        content: "▾ ";
+    }
+}
+
+/* 目录列表：细排，不用圆点 */
+.toc-side #TableOfContents ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0.7rem;
+}
+.toc-side #TableOfContents li {
+    margin: 0;
+}
+.toc-side #TableOfContents a {
+    display: block;
+    padding: 0.1rem 0;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: var(--secondary, #5c5c5c);
+    text-decoration: none;
+    border-bottom: none;
+}
+.toc-side #TableOfContents a:hover {
+    color: #8c3d2b;
+}
+.toc-side #TableOfContents ul ul a {
+    font-size: 0.82rem;
+    opacity: 0.88;
+}
+
+/* 宽屏：脱离文档流，固定到正文左缘外侧 */
+@media (min-width: 1280px) {
+    .toc-side {
+        position: fixed;
+        top: calc(var(--header-height, 60px) + 40px);
+        right: calc(50% + 392px);
+        width: 240px;
+        max-height: calc(100vh - var(--header-height, 60px) - 120px);
+        overflow-y: auto;
+        margin: 0;
+        z-index: 1;
+        scrollbar-width: thin;
+    }
+    .toc-side details {
+        background: none;
+        border: 0;
+        border-left: 1px solid var(--border, #d8d2c2);
+        border-radius: 0;
+        padding: 0 0.3rem 0 0.85rem;
+    }
+    .toc-side summary {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        cursor: default;
+        padding: 0 0 0.55rem;
+        font-size: 0.76rem;
+        letter-spacing: 0.32em;
+        background: var(--bg, var(--theme, #fff));
+    }
+    .toc-side summary::marker,
+    .toc-side details[open] summary::before {
+        content: "";
+    }
+    .toc-side #TableOfContents > ul {
+        padding-left: 0;
+    }
+    .toc-side::-webkit-scrollbar {
+        width: 4px;
+    }
+    .toc-side::-webkit-scrollbar-thumb {
+        background: var(--border, #d8d2c2);
+        border-radius: 2px;
+    }
+}
+

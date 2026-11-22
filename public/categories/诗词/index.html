@@ -1,583 +1,85 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>诗词 | 小鱼斋</title>
-<meta name="keywords" content="">
-<meta name="description" content="闲人草">
-<meta name="author" content="维垣">
-<link rel="canonical" href="http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b0da92bd6b069c0d38e969abb612881b73f9470c1f23f4f97cee193577b89b46.css" integrity="sha256-sNqSvWsGnA046WmrthKIG3P5RwwfI/T5fO4ZNXe4m0Y=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-</head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="header-nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="小鱼斋 (Alt + H)">小鱼斋</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu" class="menu">
-            <li>
-                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
-                    <span>搜索</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/poetry/" title="诗词">
-                    <span>诗词</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/booknotes/" title="读书笔记">
-                    <span>读书笔记</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/essays/" title="随笔">
-                    <span>随笔</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/archives/" title="时间轴">
-                    <span>时间轴</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-            <a href="/categories/">Categories</a>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-</nav>
-  <h1>
-    诗词
-  </h1>
-</header>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">中秋即事
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>中秋即事 心在天涯累在身，红尘过眼走飙轮。
-中庭月色谁争看，不是当年拜月人。
-</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-09-26T10:38:47&#43;08:00">September 26, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">36 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/" class="meta-link">二零二六</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 中秋即事" href="http://localhost:1313/poetry/%E4%B8%AD%E7%A7%8B%E5%8D%B3%E4%BA%8B/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">雜詩
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>雜詩 結習尙存宜在家，從來出戶似天涯。
-鄰人休問塵間事，我向井泉沉好瓜。
-</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-09-03T16:09:31&#43;08:00">September 3, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">34 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/" class="meta-link">二零二六</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 雜詩" href="http://localhost:1313/poetry/%E9%9B%9C%E8%A9%A9/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">减字木兰花
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>减字木兰花 西风未到。凄切寒蝉声渐老。苦待高秋。风雨萧然恐暮愁。
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>诗词 | 小鱼斋</title><meta name=keywords content><meta name=description content="闲人草"><meta name=author content="维垣"><link rel=canonical href=https://www.xiaoyuzhai.com/categories/%E8%AF%97%E8%AF%8D/><link crossorigin=anonymous href=/assets/css/stylesheet.07489d054f623aa68faa8e5290e425ff68638f8632ed41acd818f86d3eb52bc2.css integrity="sha256-B0idBU9iOqaPqo5SkOQl/2hjj4Yy7UGs2Bj4bT61K8I=" rel="preload stylesheet" as=style><link rel=icon href=https://www.xiaoyuzhai.com/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://www.xiaoyuzhai.com/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://www.xiaoyuzhai.com/favicon-32x32.png><link rel=apple-touch-icon href=https://www.xiaoyuzhai.com/apple-touch-icon.png><link rel=mask-icon href=https://www.xiaoyuzhai.com/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://www.xiaoyuzhai.com/categories/%E8%AF%97%E8%AF%8D/index.xml title=rss><link rel=alternate hreflang=en href=https://www.xiaoyuzhai.com/categories/%E8%AF%97%E8%AF%8D/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="https://www.xiaoyuzhai.com/categories/%E8%AF%97%E8%AF%8D/"><meta property="og:site_name" content="小鱼斋"><meta property="og:title" content="诗词"><meta property="og:description" content="闲人草"><meta property="og:locale" content="zh_cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="诗词"><meta name=twitter:description content="闲人草"></head><body class=list id=top><header class=header><nav class=header-nav><div class=logo><a href=https://www.xiaoyuzhai.com/ accesskey=h title="小鱼斋 (Alt + H)">小鱼斋</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=https://www.xiaoyuzhai.com/search/ title="搜索 (Alt + /)" accesskey=/><span>搜索</span></a></li><li><a href=https://www.xiaoyuzhai.com/poetry/ title=诗词><span>诗词</span></a></li><li><a href=https://www.xiaoyuzhai.com/booknotes/ title=读书笔记><span>读书笔记</span></a></li><li><a href=https://www.xiaoyuzhai.com/essays/ title=随笔><span>随笔</span></a></li><li><a href=https://www.xiaoyuzhai.com/tags/ title=标签><span>标签</span></a></li><li><a href=https://www.xiaoyuzhai.com/archives/ title=时间轴><span>时间轴</span></a></li></ul></nav></header><main class=main><header class=page-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=/>Home</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg>
+<a href=/categories/>Categories</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></nav><h1>诗词</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>浣溪沙·憶舊</h2></header><div class=entry-content><p>浣溪沙·憶舊 多少心情付斷鴻。書回長恨太匆匆。一燈向壁映眉紅。
+十載車塵行漸遠，當年風月寫難同。雲箋不記舊情衷。</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-11-22T16:23:34+08:00>November 22, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 1 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>54 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%B8%80%E5%85%AD/ class=meta-link>二零一六</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 浣溪沙·憶舊" href=https://www.xiaoyuzhai.com/poetry/%E6%B5%A3%E6%BA%AA%E6%B2%99%E6%86%B6%E8%88%8A/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>中秋即事</h2></header><div class=entry-content><p>中秋即事 心在天涯累在身，红尘过眼走飙轮。
+中庭月色谁争看，不是当年拜月人。</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-09-26T10:38:47+08:00>September 26, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 1 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>36 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/ class=meta-link>二零二六</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 中秋即事" href=https://www.xiaoyuzhai.com/poetry/%E4%B8%AD%E7%A7%8B%E5%8D%B3%E4%BA%8B/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>雜詩</h2></header><div class=entry-content><p>雜詩 結習尙存宜在家，從來出戶似天涯。
+鄰人休問塵間事，我向井泉沉好瓜。</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-09-03T16:09:31+08:00>September 3, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 1 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>34 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/ class=meta-link>二零二六</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 雜詩" href=https://www.xiaoyuzhai.com/poetry/%E9%9B%9C%E8%A9%A9/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>减字木兰花</h2></header><div class=entry-content><p>减字木兰花 西风未到。凄切寒蝉声渐老。苦待高秋。风雨萧然恐暮愁。
 年年无计，乏善可陈终已矣。依旧安之。小阁灯明月上时。
-不甚读书，没有充足的知识，写诗填词不可避免走向了油滑。
-</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-08-30T16:38:16&#43;08:00">August 30, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">84 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/" class="meta-link">二零二六</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 减字木兰花" href="http://localhost:1313/poetry/%E5%87%8F%E5%AD%97%E6%9C%A8%E5%85%B0%E8%8A%B1/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">晴雨後作
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>晴雨後作 半晴半雨困人天，窗外鵝聲擾不眠。
-盡日心慵無一事，風流居後懶居先。
-</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-08-24T16:21:21&#43;08:00">August 24, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">36 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/" class="meta-link">二零二六</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 晴雨後作" href="http://localhost:1313/poetry/%E6%99%B4%E9%9B%A8%E5%BE%8C%E4%BD%9C/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">闲人草
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>鹧鸪天 谁寄天涯一瓣春，已同书卷满黄尘。 十三年后无名客，犹昔灯前惜夜人。 缘有数，不相闻。偶从旧纸得诗痕。 我今未负沧浪水，茶熟香温自在真。
+不甚读书，没有充足的知识，写诗填词不可避免走向了油滑。</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-08-30T16:38:16+08:00>August 30, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 1 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>84 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/ class=meta-link>二零二六</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 减字木兰花" href=https://www.xiaoyuzhai.com/poetry/%E5%87%8F%E5%AD%97%E6%9C%A8%E5%85%B0%E8%8A%B1/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>晴雨後作</h2></header><div class=entry-content><p>晴雨後作 半晴半雨困人天，窗外鵝聲擾不眠。
+盡日心慵無一事，風流居後懶居先。</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-08-24T16:21:21+08:00>August 24, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 1 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>36 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/ class=meta-link>二零二六</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 晴雨後作" href=https://www.xiaoyuzhai.com/poetry/%E6%99%B4%E9%9B%A8%E5%BE%8C%E4%BD%9C/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>闲人草</h2></header><div class=entry-content><p>鹧鸪天 谁寄天涯一瓣春，已同书卷满黄尘。 十三年后无名客，犹昔灯前惜夜人。 缘有数，不相闻。偶从旧纸得诗痕。 我今未负沧浪水，茶熟香温自在真。
 丙午杂诗 一晴山色碧些些。丛绿浅深香径斜。 我有春心长不死，春山佳处折桃花。
 春雨 漠漠轻寒烟草滋，一春都雨误花时。 落花已逐波流去，不许闲人折一枝。
 有感 其一 闲中一日又消磨，内外纷纷付笑呵。 近岁倦谈尘里事，厌人情绪已盘多。
-其二 终朝向壁问何言。空抱愁怀声复吞。 心镜已因流俗掩，旧年英气散无痕。 ​​​
-</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-08-08T10:33:48&#43;08:00">August 8, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">210 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/" class="meta-link">二零二六</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 闲人草" href="http://localhost:1313/poetry/%E9%97%B2%E4%BA%BA%E8%8D%89/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">少年集
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>拟春游 竹叶萧萧涧水泠，暮云深处小车停。 春游欲索梨花笑，一带吴山世外青。
+其二 终朝向壁问何言。空抱愁怀声复吞。 心镜已因流俗掩，旧年英气散无痕。 ​​​</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-08-08T10:33:48+08:00>August 8, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 1 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>210 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%85%AD/ class=meta-link>二零二六</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 闲人草" href=https://www.xiaoyuzhai.com/poetry/%E9%97%B2%E4%BA%BA%E8%8D%89/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>少年集</h2></header><div class=entry-content><p>拟春游 竹叶萧萧涧水泠，暮云深处小车停。 春游欲索梨花笑，一带吴山世外青。
 春景 其一 江城二月早莺啼，我欲寻春步水西。 晴日细风吹弱柳，一痕新绿涨江堤。
 其二 昨宵行雨涨清池，莺啭门前杨柳丝。 十里晴云浮碧树，春风吹梦上南枝。
 西湖 晓岸垂杨绿渐稠，西湖行雨见鸣鸠。 几程邮驿寻归路，十里横塘似旧游。
@@ -595,89 +97,18 @@
 与十一 红尘有幸识君名，一斛佳醪且共倾。 白术为杆悬钓饵，沧浪之水濯我缨。 时闻山鬼自相语，惯见渔鸥亦不惊。 惟彼烟霞真足乐，采茶煮药涧泉清。
 卜算子 沉醉问东风，谁记青梅小。 闻得江南多丽人，君在江南老。 吹皱一池春，无意怜幽草。 折却桃花三两枝，我共桃花恼。
 前调 莺啭柳荫深，溪径茸芳草。 烟浦莲舟越女歌，君在江南老。 谁与太息之，我望天涯渺。 绿酒金杯醉一春，梦里风光好。
-...</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-08-06T17:06:48&#43;08:00">August 6, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">4 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">9960 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%B8%80%E4%B8%83%E5%89%8D/" class="meta-link">二零一七前</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 少年集" href="http://localhost:1313/poetry/%E5%B0%91%E5%B9%B4%E9%9B%86/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">二零二五
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>鹧鸪天·答梅花 不在孤山只在家，分明无意负梅花。 若非日日风吹雨，谁肯如今仍欠些。 空有约，兴难佳。出门一步似天涯。 寸心依旧无他念，不看桃花竹外斜。
+...</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-08-06T17:06:48+08:00>August 6, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 25 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>9960 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%B8%80%E4%B8%83%E5%89%8D/ class=meta-link>二零一七前</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 少年集" href=https://www.xiaoyuzhai.com/poetry/%E5%B0%91%E5%B9%B4%E9%9B%86/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>二零二五</h2></header><div class=entry-content><p>鹧鸪天·答梅花 不在孤山只在家，分明无意负梅花。 若非日日风吹雨，谁肯如今仍欠些。 空有约，兴难佳。出门一步似天涯。 寸心依旧无他念，不看桃花竹外斜。
 想撸猫 镇日不知何岁月，小楼一躲避嚣烦。 看花慵倦寻常事，只为狸奴骤出门。
 镇日不知何岁月，小楼藏躲避嚣烦。 看花慵倦寻常事，一句喵喵骤出门。
 鹧鸪天·寻小猫不遇 重到田疇欲待谁。春融日暖午风微。 茫茫野径无人度，寂寂沟渠一鸟啼。 久怅望，独徘徊。尘中何事不心违。 幽情应向何方寄，犹许明朝相见期。
@@ -694,90 +125,18 @@
 清平乐 神经天气。冷热无常理。偶尔趁它凉细细，怀了满襟幽意。 桃花谁在安排。随风飘落台阶。难道东君不语，一枝开到秋来。
 浣溪沙 已近中秋不见秋。谁同长夏约淹留。别离时候又回头。 伏案读书烦字影，推窗看月恨高楼。招商有曲试高讴。
 浣溪沙 细向秋苔觅爪痕。痕销到底不来频。明明与我两闲身。 此地不才长乐客，逢山揖手自然臣。小狸何日许为邻。
-年终 三十修成不自奇。扶摇万里恐无期。 一年一计都循例，残岁残篇叹误之。 说向春山真放我，可怜俗客总怀私。 想来缘法应如此，珍重生涯有恨时。
-</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-08-06T16:52:01&#43;08:00">August 6, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">923 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%BA%94/" class="meta-link">二零二五</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 二零二五" href="http://localhost:1313/poetry/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%BA%94/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">二零二四
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>江湖放浪养天真 江湖放浪养天真，只近天风不近人。 手把梅枝临水坐，忽疑花月我前身。
+年终 三十修成不自奇。扶摇万里恐无期。 一年一计都循例，残岁残篇叹误之。 说向春山真放我，可怜俗客总怀私。 想来缘法应如此，珍重生涯有恨时。</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-08-06T16:52:01+08:00>August 6, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 3 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>923 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%BA%94/ class=meta-link>二零二五</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 二零二五" href=https://www.xiaoyuzhai.com/poetry/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%BA%94/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>二零二四</h2></header><div class=entry-content><p>江湖放浪养天真 江湖放浪养天真，只近天风不近人。 手把梅枝临水坐，忽疑花月我前身。
 一夜梅花到小城 一夜梅花到小城。三年萧散此身轻。 池边谁似清闲我，听得檐牙散雪声。
 鹧鸪天 我是尘间自在人。屋中清坐到黄昏。 偶因云鹤怀幽兴，只向狸奴称小臣。 天下事，不知闻。风诗读罢自开樽。 梅花何事窗前转，不被春风诱出门。
 答雀问 闲对空庭引绿醅，林间雀鸟谢相陪。 劳君长日殷勤问，我待桃花春水来。
@@ -795,89 +154,18 @@
 浣溪沙 春到窗前摇一枝。问馀何日写春词。告它春色未曾知。 非是不知春色好，分明有意负花期。阴晴都是好眠时。
 春行 断桥流水响潺潺。晴日长堤碧一湾。 若使悭囊似光满，风前姿态更悠闲。
 霜天晓角 终非止水。又作波澜起。漫道生涯可可，触目是、愁滋味。 无寐。怅已矣。谁与我心会？知是今生未必，何处说、三生事。
-...</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-08-06T16:49:28&#43;08:00">August 6, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">2273 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%9B%9B/" class="meta-link">二零二四</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 二零二四" href="http://localhost:1313/poetry/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%9B%9B/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">二零二三
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>闲居 却扫门庭慵对客，梅花长伴少年身。
+...</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-08-06T16:49:28+08:00>August 6, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 6 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>2273 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%9B%9B/ class=meta-link>二零二四</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 二零二四" href=https://www.xiaoyuzhai.com/poetry/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E5%9B%9B/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>二零二三</h2></header><div class=entry-content><p>闲居 却扫门庭慵对客，梅花长伴少年身。
 寒日 岁杪千山雪，松斋冷似冰。 花时身总误，盟约了无凭。 德业惭诸子，诗书愧友朋。 近来情兴薄，懒看月和灯。
 不来 寒梅雪里绽些些。小坐窗前瘦影斜。 又是年光将尽夜，相逢知在几时耶？
 寄某 冰心一片有谁同？盟誓何曾见始终。 此后新诗应少作，已无情意报深衷。
@@ -904,276 +192,19 @@
 苔色青苍著雨痕，春来谁与问寒温。 我今不耐周旋久，世事浑无一可言。
 蝶恋花 帘内沉香烟一缕。帘外流莺，惊起闲情绪。 身似孤云独来去，从来好景难相遇。
 寸心惆怅频回顾。谁向春风，笑里轻轻语。 休道桃花无寻处，桃花已在人间驻。
-...</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-08-06T16:43:04&#43;08:00">August 6, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">2539 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%B8%89/" class="meta-link">二零二三</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 二零二三" href="http://localhost:1313/poetry/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%B8%89/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">二零二二
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>鹧鸪天 过眼云烟迹可寻？相逢街市幸能禁。 香车渐到人潮外，旧月犹从梦里侵。
-醒恍恍，意沉沉。孤灯抱影两萧森。 如知盟誓皆成旧，何必相思到骨深。
-无题 灯火满城看不眠，翻思旧事似云烟。 寒星寥落千峰外，神女微茫一水前。 信步长街行缓缓，小桥独立恨绵绵。 他年会有怜卿者，身世华年得两全。
-杂诗 亲旧登门兴未阑，人间情绪不相干。 春风见我休询问，一角阴晴独自看。
-浣溪沙 拟问寒温各已非，十年行迹早相违。灯前低首笑容微。
-欲献殷勤伤往事，说声珍重负阿谁。人间悲喜只衔杯。
-春 谁遣东风放一枝？庭前春色望迟迟。 当窗细语春归事，莫使他人先我知。
-鹧鸪天 纸上风流记得么？故人名字弃忘多。 风云世道常如幻，岁月华年一掷梭。
-重点检，暗摩挲。十年幽忆似江河。 他年纵有相逢日，问起无言只应“哦”。
-蝶恋花 濯濯风姿还似么？春到江南，谁与花间坐？ 谁为鬓云簪一朵？姻缘或许修成果。
-忍泪举杯遥祝贺。悲喜难持，不醉如何躲？ 三百诗篇曾有我，如今拈笔因谁作？
-春 已被闲愁毁一春，庭前摇落更伤神。 看花谁作怜花者？不过风前各自珍。
-如是 如是生涯悔也迟，并刀如水剪情丝。 旧年悲喜全抛掷，得证菩提是几时？
-分 客里同居终有期。那堪分手讷言辞。 深情何似红英减？只道“流年不可追”。
-咸鱼 有客窥园恼费辞，向天祷请莫来斯。 一春一夏颓然卧，只为狸奴写小诗。
-热 开窗炎气似无涯，雨后晴来暑更加。吩咐狸奴离我去，好教热浪减些些。
-客里 漂泊四年书一箱，深情早已转寻常。 几回辜负青城月，回首朝昏空自忙。
-牢骚 萍寄天涯不解颜，连宵无梦是缘悭。 诗情渐与年光减，得失悲欢醒后删。
-临江仙·牢骚 庭院深深深几许，秋风秋叶凋零。 江湖秋水散浮萍。共谁璧月满，谁看月分明。
-都是锦城多病客，长街难见人行。 心怀难似镜般平。睡吧无意思，码字没心情。
-人月圆 锦城明月窥难见，都是高楼。过甚中秋。心上平添一段愁。
-天涯浪迹如萍寄，悔作闲游。回忆温柔，说著他乡不可留。
-浣溪沙 二十七年任掷梭。深情负后悔蹉跎。日高懒起兴无多。 频写音书终不寄，谁怜形影黯消磨。从今休梦旧梨涡。
-鹧鸪天·没带走的猫 曾为狸奴写聘书，昆仑白雪到吾庐。 偎窗占枕恃无赖，逐日穿帘乐自如。
-夜长寂，梦号呼。东西南北早分途。 明知非梦难相见，犹问重逢记我无。
-鹧鸪天 不理儒经不解禅，长年难改纵疏顽。 残书尘满无人理，一枕花香常自欢。
-衡门外，却尘烦。相逢去住任随缘。 从今依旧歌渔水，生本咸鱼号懒仙。
-...</p>
-  </div>
-  <footer class="entry-footer"><div class="post-meta">
-    <time datetime="2026-08-06T16:38:18&#43;08:00">August 6, 2026</time>
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1 分钟阅读</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">1128 字</span>
-    
-
-    
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="meta-link">诗词</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">📁
-        
-            
-            <a href="/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%BA%8C/" class="meta-link">二零二二</a>
-        
-    </span>
-    
-
-    
-    <span class="meta-sep">·</span>
-    <span class="meta-item">
-        
-            
-            <a href="/tags/%E8%AF%97%E8%AF%8D/" class="meta-link">#诗词</a>
-        
-    </span>
-    
-</div>
-
-<style>
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-}
-.meta-link {
-    color: var(--secondary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border);
-}
-.meta-link:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-}
-.meta-sep {
-    color: var(--secondary);
-    opacity: 0.7;
-}
-</style></footer>
-  <a class="entry-link" aria-label="post link to 二零二二" href="http://localhost:1313/poetry/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%BA%8C/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="http://localhost:1313/categories/%E8%AF%97%E8%AF%8D/page/2/">Next&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">小鱼斋</a></span> · 
-
-    
-    
-    <span>
-        Powered by
-        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
-        <polyline points="17 11 12 6 7 11"></polyline>
-        <polyline points="17 18 12 13 7 18"></polyline>
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var toplink = document.getElementById("top-link");
-    window.onscroll = function () {
-        const scrollThreshold = window.innerHeight;
-        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-            toplink.classList.remove("hidden");
-        } else {
-            toplink.classList.add("hidden");
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+...</p></div><footer class=entry-footer><div class=post-meta><time datetime=2026-08-06T16:43:04+08:00>August 6, 2026</time>
+<span class=meta-sep>·</span>
+<span class=meta-item>约 7 分钟阅读</span>
+<span class=meta-sep>·</span>
+<span class=meta-item>2539 字</span>
+<span class=meta-sep>·</span>
+<span class=meta-item><a href=/categories/%E8%AF%97%E8%AF%8D/ class=meta-link>诗词</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item>📁
+<a href=/genres/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%B8%89/ class=meta-link>二零二三</a>
+</span><span class=meta-sep>·</span>
+<span class=meta-item><a href=/tags/%E8%AF%97%E8%AF%8D/ class=meta-link>#诗词</a></span></div><style>.post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.9rem;color:var(--secondary);margin-bottom:1.2rem}.meta-link{color:var(--secondary);text-decoration:none;border-bottom:1px dashed var(--border)}.meta-link:hover{color:var(--primary);border-bottom-color:var(--primary)}.meta-sep{color:var(--secondary);opacity:.7}</style></footer><a class=entry-link aria-label="post link to 二零二三" href=https://www.xiaoyuzhai.com/poetry/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E4%B8%89/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://www.xiaoyuzhai.com/categories/%E8%AF%97%E8%AF%8D/page/2/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://www.xiaoyuzhai.com/>小鱼斋</a></span> ·
+<span>Powered by
+<a href="https://gohugo.io/?utm_source=papermod" rel=noopener target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link");window.onscroll=function(){const e=window.innerHeight;document.body.scrollTop>e||document.documentElement.scrollTop>e?toplink.classList.remove("hidden"):toplink.classList.add("hidden")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
