@@ -1,0 +1,18 @@
+{{ $related := (.Site.RegularPages.Related .) | first 5 }}
+{{ with $related }}
+<aside class="related-block">
+    <h2 class="section-title">{{ T "article.relatedContent" }}</h2>
+    <ul class="related-list">
+        {{ range . }}
+        <li>
+            <a href="{{ .RelPermalink }}">
+                <span class="related-list__title">{{ .Title }}</span>
+                <span class="related-list__meta">
+                    {{ with .GetTerms "categories" }}{{ (index . 0).LinkTitle }}{{ end }}
+                </span>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</aside>
+{{ end }}

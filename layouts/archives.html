@@ -1,0 +1,48 @@
+{{ define "body-class" }}template-archives{{ end }}
+{{ define "main" }}
+    <header class="archives-header">
+        {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "categories" -}}
+        {{- with $taxonomy -}}
+            {{- with .Pages }}
+            <div class="term-chips">
+                <span class="term-chips__label">分类</span>
+                {{ range . }}
+                    <a class="term-chip" href="{{ .RelPermalink }}">
+                        {{- .LinkTitle -}}
+                        <span class="term-chip__count">{{ len .Pages }}</span>
+                    </a>
+                {{ end }}
+            </div>
+            {{- end -}}
+        {{- end }}
+    </header>
+
+    {{ $pages := partial "helper/pages.html" .Site.Home }}
+
+    <div class="timeline">
+        {{ range $pages.GroupByDate "2006" }}
+        {{ $id := lower (replace .Key " " "-") }}
+        <section class="timeline__year" id="{{ $id }}">
+            <details class="timeline__details">
+                <summary class="timeline__year-title">
+                    <span class="timeline__year">{{ .Key }}</span>
+                    <span class="timeline__count">{{ len .Pages }} 篇</span>
+                    {{ partial "helper/icon" "chevron-right" }}
+                </summary>
+                <ul class="timeline__list">
+                    {{ range .Pages }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">
+                            <time class="timeline__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01-02" }}</time>
+                            <span class="timeline__title">{{ .Title }}</span>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </details>
+        </section>
+        {{ end }}
+    </div>
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}

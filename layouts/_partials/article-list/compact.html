@@ -1,0 +1,54 @@
+{{- $page := . -}}
+{{- $inTerm := false -}}
+{{- if reflect.IsMap . -}}
+    {{- $page = .Page -}}
+    {{- $inTerm = .InTerm -}}
+{{- end -}}
+{{- $isTermPage := eq $page.Kind "term" -}}
+<article{{ if and $inTerm (not $isTermPage) }} class="is-term"{{ end }}>
+    <a href="{{ $page.RelPermalink }}">
+        <div class="article-details">
+            <h2 class="article-title">
+                {{- $page.Title -}}
+            </h2>
+
+            {{- if $isTermPage -}}
+                {{- $desc := $page.Params.description | default (T "list.page" (len $page.Pages)) }}
+                <footer class="article-meta">
+                    <span class="article-description">{{ $desc }}</span>
+                </footer>
+            {{- else if $inTerm -}}
+                {{- $text := $page.Summary | plainify | htmlUnescape | chomp -}}
+                {{- $text = strings.TrimSpace (strings.TrimPrefix (strings.TrimSpace $page.Title) $text) -}}
+                {{- with $text }}
+                    <p class="article-excerpt">{{ . | truncate 90 }}</p>
+                {{- end }}
+            {{- else if not $page.Date.IsZero }}
+                <footer class="article-meta">
+                    <time datetime="{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                        {{- $page.Date | time.Format $page.Site.Params.dateFormat.published -}}
+                    </time>
+                </footer>
+            {{- end }}
+        </div>
+
+        {{- $image := partial "helper/image" (dict "Image" $page.Params.image "Resources" $page.Resources "Context" $page) -}}
+        {{ if $image }}
+        <div class="article-image">
+            {{ partial "helper/thumbnail-image" (dict
+                "Resource" $image.Resource
+                "Width" 60
+                "Height" 60
+                "Resize" $page.Site.Params.ImageProcessing.Thumbnail.Enabled
+                "Attributes" (dict
+                    "src" $image.Permalink
+                    "alt" $page.Title
+                    "loading" "lazy"
+                    "width" $image.Width
+                    "height" $image.Height
+                )
+            ) }}
+        </div>
+        {{ end }}
+    </a>
+</article>

@@ -1,0 +1,37 @@
+{{- /*
+    评论：Waline（客户端 v3）
+    主题自带的是 @waline/client v2，服务端 v3 已不支持 LeanCloud，
+    v2 客户端与 v3 服务端混用容易出现接口不匹配，这里改用 v3 的 ESM 入口。
+*/ -}}
+<link href="https://unpkg.com/@waline/client@3/dist/waline.css" rel="stylesheet"/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style>
+
+{{- with .Site.Params.comments.waline -}}
+{{- $config := dict "el" "#waline" "dark" `html[data-scheme="dark"]` -}}
+{{- $replaceKeys := dict "serverurl" "serverURL" "requiredmeta" "requiredMeta" "wordlimit" "wordLimit" "pagesize" "pageSize" "imageuploader" "imageUploader" "texrenderer" "texRenderer" "turnstilekey" "turnstileKey" "commentcount" "commentCount" -}}
+
+{{- range $key, $val := . -}}
+    {{- if ne $val nil -}}
+        {{- $replaceKey := index $replaceKeys $key -}}
+        {{- $k := default $key $replaceKey -}}
+        {{- $config = merge $config (dict $k $val) -}}
+    {{- end -}}
+{{- end -}}
+
+<script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@3/dist/waline.js';
+    init({{ $config | jsonify | safeJS }});
+</script>
+{{- end -}}

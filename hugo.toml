@@ -1,80 +1,126 @@
 baseURL = "https://www.xiaoyuzhai.com/"
-locale = "zh-cn"                    # 小写
+locale = "zh-cn"
+defaultContentLanguage = "zh-cn"
 title = "小鱼斋"
-theme = "PaperMod"
-paginate = 10
-paginatePath = "page"
+theme = "hugo-theme-stack"
 
-# 允许markdown内的html标签（<small>等）渲染生效
+[pagination]
+  pagerSize = 10
+
 [markup.goldmark.renderer]
-unsafe = true
-
-[params]
-author = "维垣"
-description = "闲人草"
-color = "linen"
-rss = true
-ShowToc = true
-ShowMenuItems = true
-ShowBreadCrumbs = true
-ShowReadingTime = true                # 显示预计阅读时间
-readingSpeed = 400                    # 阅读速度（字/分钟），用于计算阅读时间
-ShowWordCount = true
-ShowPostNavLinks = true
-# 关闭首页“查看更多”按钮，解决404
-homeInfoParams = { ShowMore = false }
-mainSections = ["poetry", "booknotes", "essays"]
-# 加载自定义css，用于微调<small>注释字号
-customCSS = [ "css/custom.css" ]
-
-[params.profileMode]
-enabled = true
-title = "维垣"
-subtitle = "我到青山今是客，他年应与白云归。"
-imageUrl = "img/profile.jpg"
-imageWidth = 150
-imageHeight = 150
+  unsafe = true
 
 [taxonomies]
-category = "categories"
-tag = "tags"
-genre = "genres"
+  category = "categories"
+  tag = "tags"
+  genre = "genres"
 
-[outputs]
-home = ["HTML", "RSS", "JSON"]
+[permalinks]
+  post = "/post/:slug/"
+
+[params]
+  mainSections = ["poetry", "booknotes", "essays"]
+  rssFullContent = true
+
+  [params.sidebar]
+    compact = false
+    avatar = "img/profile.jpg"
+    # 头像角标：线性太极（模板内联 SVG，值仅作开关）
+    emoji = "taiji"
+    subtitle = "我到青山今是客，他年应与白云归。"
+
+  [params.article]
+    headingAnchor = true
+    toc = true
+    readingTime = true
+
+    [params.article.list]
+      showTags = false
+
+  [params.dateFormat]
+    published = "2006 年 1 月 2 日"
+    lastUpdated = "2006 年 1 月 2 日"
+
+  [params.colorScheme]
+    toggle = true
+    default = "light"
+
+  [params.comments]
+    enabled = true
+    provider = "waline"
+
+    [params.comments.waline]
+      serverURL = "https://xiaoyuzhai-waline.vercel.app"
+      lang = "zh-CN"
+      # disable = 访客填昵称邮箱即可评论；enable = 显示第三方登录（需另配 OAuth 服务）
+      login = "disable"
+      requiredMeta = ["nick", "mail"]
+      pageSize = 10
+
+  [params.footer]
+    since = 2026
+    customText = "闲人草 · 小鱼斋"
+
+  [params.widgets]
+    homepage = [
+      { type = "archives", params = { limit = 4 } },
+      { type = "categories" },
+      { type = "tag-cloud", params = { limit = 20 } },
+    ]
+    page = [{ type = "toc" }]
 
 [[menu.main]]
-identifier = "search"
-name = "搜索"
-url = "/search/"
-weight = 10
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 10
+  [menu.main.params]
+    icon = "home"
 
 [[menu.main]]
-identifier = "poetry"
-name = "诗词"
-url = "/poetry/"
-weight = 20
+  identifier = "poetry"
+  name = "诗词"
+  url = "/poetry/"
+  weight = 20
+  [menu.main.params]
+    icon = "feather"
 
 [[menu.main]]
-identifier = "booknotes"
-name = "读书笔记"
-url = "/booknotes/"
-weight = 21
+  identifier = "booknotes"
+  name = "读书笔记"
+  url = "/booknotes/"
+  weight = 30
+  [menu.main.params]
+    icon = "archives"
 
 [[menu.main]]
-identifier = "essays"
-name = "随笔"
-url = "/essays/"
-weight = 22
+  identifier = "essays"
+  name = "随笔"
+  url = "/essays/"
+  weight = 40
+  [menu.main.params]
+    icon = "messages"
 
 [[menu.main]]
-identifier = "tags"
-name = "标签"
-url = "/tags/"
-weight = 23
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 50
+  [menu.main.params]
+    icon = "tag"
 
 [[menu.main]]
-identifier = "archives"
-name = "时间轴"
-url = "/archives/"
-weight = 24
+  identifier = "archives"
+  name = "时间轴"
+  url = "/archives/"
+  weight = 60
+  [menu.main.params]
+    icon = "clock"
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search/"
+  weight = 70
+  [menu.main.params]
+    icon = "search"

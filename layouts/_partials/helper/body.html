@@ -1,0 +1,11 @@
+{{- /*
+    返回正文 HTML，并去掉与页头标题重复的首行小标题。
+    诗词正文常以「### 词牌名」开头，与页头 h1 重复。
+*/ -}}
+{{- $content := .Content -}}
+{{- if .IsPage -}}
+    {{- $escaped := replaceRE `([.*+?^${}()|\[\]\\])` `\$1` .Title -}}
+    {{- $pattern := printf `(?s)^\s*<h[1-6][^>]*>\s*(?:<a[^>]*></a>)?\s*%s\s*</h[1-6]>\s*` $escaped -}}
+    {{- $content = replaceRE $pattern "" $content -}}
+{{- end -}}
+{{- return $content -}}

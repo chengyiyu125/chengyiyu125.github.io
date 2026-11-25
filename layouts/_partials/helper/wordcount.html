@@ -1,0 +1,4 @@
+{{- /* 中文按字符计数：Hugo 的 .WordCount 按空白分词，中文会算成极少数"词" */ -}}
+{{- $text := .Plain -}}
+{{- $text = replaceRE `[\s\x{3000}]+` "" $text -}}
+{{- return strings.RuneCount $text -}}
