@@ -33,6 +33,8 @@ theme = "hugo-theme-stack"
     headingAnchor = true
     toc = true
     readingTime = true
+    # 中文阅读时长按「字符数 ÷ 本值」估算，默认 400 字/分钟
+    readingSpeed = 400
 
     [params.article.list]
       showTags = false

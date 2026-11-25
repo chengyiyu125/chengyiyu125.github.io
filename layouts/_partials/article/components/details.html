@@ -61,7 +61,7 @@
                 {{ if $showReadingTime }}
                     {{ partial "helper/icon" "clock" }}
                     <time class="article-time--reading">
-                        {{ T "article.readingTime" $Page.ReadingTime }}
+                        {{ T "article.readingTime" (partial "helper/readingtime" $Page) }}
                     </time>
                     <span class="meta-dot">·</span>
                     <span class="article-wordcount">{{ partial "helper/wordcount" $Page }} 字</span>

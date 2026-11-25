@@ -1,0 +1,11 @@
+{{- /* 中文阅读时长 = 字符数 ÷ 每分钟阅读字数。
+     不能用 Hugo 的 .ReadingTime：它由 .WordCount 推导，而中文没有空格分词，
+     整篇会被算成极少数“词”，任何长文都显示 1 分钟。
+     默认 400 字/分钟，可在 hugo.toml 的 [params.article] readingSpeed 调整。 */ -}}
+{{- $speed := .Site.Params.article.readingSpeed | default 400 -}}
+{{- $chars := partial "helper/wordcount" . -}}
+{{- $minutes := math.Ceil (div (float $chars) (float $speed)) -}}
+{{- if lt $minutes 1 -}}
+    {{- $minutes = 1 -}}
+{{- end -}}
+{{- return (int $minutes) -}}
