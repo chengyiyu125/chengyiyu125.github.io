@@ -30,7 +30,8 @@ darkMode   = "暗色模式"
 
 [widget]
     [widget.archives]
-        title = "归档"
+        # 与左侧菜单的「时间轴」保持一致，不再叫「归档」
+        title = "时间轴"
         more  = "更多"
 
     [widget.tagCloud]

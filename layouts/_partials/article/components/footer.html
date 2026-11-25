@@ -1,17 +1,21 @@
 <footer class="article-meta article-footer">
+    {{- /* 阅读时长与字数已在文章头部显示，此处只保留分类与年集，避免重复 */ -}}
+    {{- $printed := false -}}
     <section class="article-stats inline-meta">
-        {{ partial "helper/icon" "clock" }}
-        <span>{{ T "article.readingTime" (partial "helper/readingtime" .) }}</span>
-        <span class="stat-dot">·</span>
-        <span>{{ partial "helper/wordcount" . }} 字</span>
-        {{ with .GetTerms "categories" }}
-            <span class="stat-dot">·</span>
-            {{ range . }}<a class="stat-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
-        {{ end }}
-        {{ with .GetTerms "genres" }}
-            <span class="stat-dot">·</span>
-            {{ range . }}<a class="stat-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
-        {{ end }}
+        {{- with .GetTerms "categories" }}
+            {{- range . }}
+                {{- if $printed }}<span class="stat-dot">·</span>{{ end }}
+                <a class="stat-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                {{- $printed = true }}
+            {{- end }}
+        {{- end }}
+        {{- with .GetTerms "genres" }}
+            {{- range . }}
+                {{- if $printed }}<span class="stat-dot">·</span>{{ end }}
+                <a class="stat-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                {{- $printed = true }}
+            {{- end }}
+        {{- end }}
     </section>
 
     {{ if and (.Site.Params.article.license.enabled) (not (eq .Params.license false)) }}

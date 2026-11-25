@@ -12,7 +12,13 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">{{ T "list.page" (len .Pages) }}</h3>
+                <h3 class="section-count">
+                    {{- if eq .Kind "taxonomy" -}}
+                        {{ len .Pages }}{{ if eq .Data.Plural "tags" }} 个标签{{ else if eq .Data.Plural "categories" }} 个分类{{ else }} 个词条{{ end }}
+                    {{- else -}}
+                        {{ T "list.page" (len .Pages) }}
+                    {{- end -}}
+                </h3>
                 <h1 class="section-term">{{ .Title }}</h1>
                 {{ with .Params.description }}
                     <h2 class="section-description">{{ . }}</h2>
@@ -60,6 +66,10 @@
         </aside>
     {{- end -}}
     
+    {{/* 标签总览页：改成彩色词云，不再罗列条目（分类仍用列表） */}}
+    {{- if and (eq .Kind "taxonomy") (eq .Data.Plural "tags") -}}
+        {{ partial "term-cloud.html" . }}
+    {{- else -}}
     {{/* List only pages that are not a subsection */}}
     {{ $paginator := partial "helper/paginator.html" . }}
     {{ $inTerm := eq .Kind "term" }}
@@ -72,6 +82,7 @@
     {{ end }}
 
     {{- partial "pagination.html" . -}}
+    {{- end -}}
 
     {{ partialCached "footer/footer" . }}
 {{ end }}

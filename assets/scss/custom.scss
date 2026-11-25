@@ -5,11 +5,11 @@
     --sys-font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
     --article-font-family: var(--base-font-family);
 
-    /* 纸面仍是纯白，卡片靠柔和投影与背景分开 */
+    /* 纸面纯白，卡片浅灰，靠底色与投影分出层次 */
     --body-background: #ffffff;
     --body-text-color: #4a4a4a;
 
-    --card-background: #ffffff;
+    --card-background: #faf9f6;
     --card-background-selected: #faf8f4;
     --card-text-color-main: #2b2b2b;
     --card-text-color-secondary: #5c5c5c;
@@ -87,6 +87,8 @@
 .site-description {
     letter-spacing: 0.06em;
     line-height: 1.7;
+    /* 简介只有一句，折行时让两行长度接近，避免末行只剩一两个字 */
+    text-wrap: balance;
 }
 
 /* 侧边栏菜单：稍宽松 */
@@ -94,10 +96,16 @@
     letter-spacing: 0.08em;
 }
 
-/* 引用块：素笺 */
+/* 引用块：素笺，左右内缩，不再顶到卡片边缘 */
+.article-page .article-content blockquote,
 .article-content blockquote {
     border-left: 3px solid var(--card-separator-color);
-    background: rgba(0, 0, 0, 0.02);
+    background: rgba(56, 42, 26, 0.045);
+    margin-left: clamp(14px, 3.5vw, 26px);
+    margin-right: clamp(14px, 3.5vw, 26px);
+    width: auto;
+    padding: 1em 1.3em;
+    border-radius: 3px;
 }
 
 /* 分割线更浅 */
@@ -798,4 +806,169 @@ html[data-scheme="dark"] .search-result mark {
 
 html[data-scheme="dark"] .pagination .page-link.current {
     color: var(--accent-color-text);
+}
+
+/* ──────────────────────────────────────────────────────────
+   正文版心与首行缩进
+   1. 加大文章卡片的左右内边距，避免文字顶到卡片边缘
+   2. 中文散文段落首行缩进两字（诗词不加，逐行缩进会读成断句）
+   ────────────────────────────────────────────────────────── */
+.article-page .main-article {
+    --card-padding: clamp(24px, 4.5vw, 52px);
+}
+
+.section-essays .article-content > p,
+.section-booknotes .article-content > p {
+    text-indent: 2em;
+}
+
+/* 引用块本身就带缩进，不再叠加 */
+.section-essays .article-content blockquote p,
+.section-booknotes .article-content blockquote p {
+    text-indent: 0;
+}
+
+/* ──────────────────────────────────────────────────────────
+   彩色标签云（标签页 /tags/ 与侧栏「标签云」widget）
+   颜色由 helper/tag-color.html 按标签名哈希取，同一标签永远同色；
+   字号只在标签页按篇数缩放，侧栏保持统一字号以免压过正文。
+   ────────────────────────────────────────────────────────── */
+.term-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.8rem 1.1rem;
+    padding: 2.6rem 0.2rem 1.2rem;
+}
+
+.term-cloud__item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4em;
+    padding: 0.16em 0.7em;
+    border-radius: 3px;
+    color: var(--tag-color, var(--accent-color));
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    background: color-mix(in srgb, var(--tag-color, #8c3d2b) 7%, transparent);
+    border: 1px solid color-mix(in srgb, var(--tag-color, #8c3d2b) 17%, transparent);
+    transition: background-color 0.18s ease, border-color 0.18s ease;
+
+    &:hover {
+        background: color-mix(in srgb, var(--tag-color, #8c3d2b) 14%, transparent);
+        border-color: color-mix(in srgb, var(--tag-color, #8c3d2b) 34%, transparent);
+    }
+}
+
+.term-cloud__count {
+    font-size: 0.58em;
+    font-weight: 400;
+    color: var(--card-text-color-tertiary);
+}
+
+.term-cloud__hint {
+    margin: 0.6rem 0 0;
+    font-size: 1.35rem;
+    letter-spacing: 0.06em;
+    color: var(--card-text-color-tertiary);
+}
+
+/* 侧栏标签云：沿用主题的卡片胶囊形状（有投影），只把文字与底色染上tag 色，
+   这样紧挨着的「分类」widget 不会被衬成两种不同的胶囊样式 */
+.tagCloud-tags--colored a {
+    color: var(--tag-color, var(--accent-color)) !important;
+    background: color-mix(in srgb, var(--tag-color, #8c3d2b) 6%, var(--card-background)) !important;
+
+    &:hover {
+        background: color-mix(in srgb, var(--tag-color, #8c3d2b) 12%, var(--card-background)) !important;
+    }
+}
+
+/* 暗色下提亮，传统的深色系在深底上会糊成一团 */
+:root[data-scheme="dark"] .term-cloud__item,
+:root[data-scheme="dark"] .tagCloud-tags--colored a {
+    color: color-mix(in srgb, var(--tag-color, #d48b6a) 66%, #ffffff);
+}
+
+:root[data-scheme="dark"] .tagCloud-tags--colored a {
+    color: color-mix(in srgb, var(--tag-color, #d48b6a) 66%, #ffffff) !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   左侧栏整体卡片化
+   把头像 / 站名 / 菜单包成一张与文章卡同款的卡片。
+   窄屏保持 display: contents，抽屉菜单的定位逻辑不受影响。
+   ────────────────────────────────────────────────────────── */
+.sidebar-card {
+    display: contents;
+}
+
+@media (min-width: 1024px) {
+    .sidebar-card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+        /* 主题默认图标与文字的间距是 40px（原本靠左排版用的），
+           居中后这个间距会让图标和文字离散，收窄到 14px */
+        --menu-icon-separation: 14px;
+        gap: var(--sidebar-element-separation);
+        padding: 30px 22px;
+        background: var(--card-background);
+        border: 1px solid var(--card-border-color);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+    }
+
+    /* 卡片内间距交给 gap，取消主题给兄弟元素加的下外边距 */
+    .sidebar-card > header,
+    .sidebar-card > .menu-social,
+    .sidebar-card > #main-menu {
+        margin-bottom: 0;
+    }
+
+    /* 内容整体居中：头像 / 站名 / 简介居中，菜单作为一整块居中，
+       给标签设一个最小宽度，各行等宽后图标列仍然对得齐 */
+    .sidebar-card > header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .sidebar-card #main-menu {
+        align-items: center;
+    }
+
+    .sidebar-card #main-menu > li {
+        width: auto;
+    }
+
+    .sidebar-card #main-menu li span {
+        min-width: 4.4em;
+    }
+
+    .sidebar-card #main-menu {
+        background: transparent;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        min-height: 0;
+    }
+}
+
+/* 左侧栏加宽：卡片自带左右内边距，列宽需比原来的"纯文字列"更宽，否则菜单与简介发挤 */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container.main-container.extended {
+        --left-sidebar-max-width: 224px;
+        --right-sidebar-max-width: 25%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container.main-container.extended {
+        --left-sidebar-max-width: 262px;
+        /* 左栏加宽占用的宽度从右侧栏让出来，保证正文版心仍是约 733px */
+        --right-sidebar-max-width: 21%;
+    }
 }

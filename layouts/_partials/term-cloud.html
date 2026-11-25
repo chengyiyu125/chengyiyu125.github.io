@@ -1,0 +1,30 @@
+{{- /*
+    标签云 / 分类云。
+    字号按篇数的平方根缩放（开方是为了压缩差距：17 篇 vs 1 篇若线性缩放，
+    后者会小到看不清），颜色由 helper/tag-color.html 按名称哈希取得。
+*/ -}}
+{{- $plural := .Data.Plural -}}
+{{- $terms := index site.Taxonomies $plural -}}
+{{- $total := 0 -}}
+{{- $max := 1 -}}
+{{- range $terms -}}
+    {{- $total = add $total .Count -}}
+    {{- if gt .Count $max }}{{ $max = .Count }}{{ end -}}
+{{- end -}}
+{{- $sqrtMax := math.Sqrt (float $max) -}}
+
+<div class="term-cloud" data-total="{{ $total }}">
+    {{- range $terms.ByCount }}
+        {{- $ratio := div (math.Sqrt (float .Count)) $sqrtMax -}}
+        {{- $size := add 1.55 (mul 1.15 $ratio) -}}
+        {{- $color := partial "helper/tag-color.html" .Page.Title -}}
+        <a class="term-cloud__item"
+           href="{{ .Page.RelPermalink }}"
+           style="--tag-color: {{ $color }}; font-size: {{ printf "%.2f" $size }}rem;">
+            <span class="term-cloud__name">{{ .Page.Title }}</span>
+            <span class="term-cloud__count">{{ .Count }}</span>
+        </a>
+    {{- end }}
+</div>
+
+<p class="term-cloud__hint">{{ $total }} 篇文字散落在 {{ len $terms }} 个标签里。</p>

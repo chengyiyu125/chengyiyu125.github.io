@@ -5,6 +5,9 @@
         </span>
     </button>
 
+    {{/* 桌面端把头像 + 站名 + 菜单整体包成一张卡片（站点级定制）；窄屏下 display: contents 不影响抽屉菜单 */}}
+    <div class="sidebar-card">
+
     <header>
         {{ with .Site.Params.sidebar.avatar }}
             {{- $avatar := partial "helper/image" (dict "Image" . "Resources" resources "Context" $) -}}
@@ -99,4 +102,6 @@
             </ol>
         </li>
     </ol>
+
+    </div>
 </aside>

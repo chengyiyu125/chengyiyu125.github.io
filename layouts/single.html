@@ -1,5 +1,6 @@
 {{ define "body-class" }}
     article-page
+    {{ with .Section }}section-{{ . }}{{ end }}
     {{/* 
         Enable the right sidebar if
             - Widget different from 'TOC' is enabled
