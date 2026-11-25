@@ -10,6 +10,9 @@
 # hugo锁文件
 /.hugo_build.lock
 
+# 本地工作笔记（WorkBuddy 项目记忆，不随仓库发布）
+/.workbuddy/
+
 # 系统垃圾
 .DS_Store
 .vscode/
