@@ -65,6 +65,7 @@ theme = "hugo-theme-stack"
 
   [params.widgets]
     homepage = [
+      { type = "search" },
       { type = "archives", params = { limit = 4 } },
       { type = "categories" },
       { type = "tag-cloud", params = { limit = 20 } },

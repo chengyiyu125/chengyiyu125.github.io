@@ -169,11 +169,9 @@ hr {
     margin-bottom: 0;
 }
 
-/* 右侧目录：去掉图标与默认圆点，只留细排条目 */
-.widget-icon {
-    display: none;
-}
-
+/* 右侧目录：去掉默认圆点，只留细排条目；
+   目录 widget 的图标由站点覆盖模板（widget/toc.html）直接去掉，
+   这里的 .widget-icon 不再全局隐藏，首页归档/分类/标签云的图标要显示 */
 .toc-nav ul,
 .toc-nav ol {
     list-style: none !important;
@@ -971,4 +969,13 @@ html[data-scheme="dark"] .pagination .page-link.current {
         /* 左栏加宽占用的宽度从右侧栏让出来，保证正文版心仍是约 733px */
         --right-sidebar-max-width: 21%;
     }
+}
+
+/* ──────────────────────────────────────────────────────────
+   右栏 widget 只留图标，去掉「时间轴 / 分类 / 标签云」标题文字。
+   文章页（body.article-page）的「目录」「相关文章」标题不受影响；
+   搜索框的「搜索」label 不是 .widget-title，也保留。
+   ────────────────────────────────────────────────────────── */
+body:not(.article-page) .right-sidebar .widget-title {
+    display: none;
 }
