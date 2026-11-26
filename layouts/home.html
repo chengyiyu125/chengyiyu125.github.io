@@ -1,0 +1,101 @@
+{{ define "main" }}
+    {{/* ─────────────────────────────────────────────
+        门厅（landing gate）：默认盖住首页内容，
+        点击「入斋」后揭幕；本会话内已进入过则直接放行。
+        鼠标在门厅内移动会拖出星光尾迹（仅桌面指针）。
+        依赖 assets/scss/custom.scss 中的 .gate 样式块；
+        删除本文件即可完全回滚，主题不受影响。
+        ───────────────────────────────────────────── */}}
+    <div id="gate" class="gate" aria-hidden="true">
+        <div class="gate__inner" id="gate-stage">
+            <div class="gate__symbol">☷</div>
+            <h1 class="gate__title"><span>闲</span><span>人</span><span>草</span><span>·</span><span>小</span><span>鱼</span><span>斋</span></h1>
+            <p class="gate__verse">
+                <span class="gate__rule"></span>
+                <span class="gate__line">我到青山今是客，他年应与白云归。</span>
+                <span class="gate__rule"></span>
+            </p>
+            <div class="gate__actions">
+                <button type="button" class="gate__enter" data-gate-enter>入斋</button>
+                <p class="gate__year" id="gate-year">丙午年 · 冬月</p>
+            </div>
+        </div>
+    </div>
+    <noscript><style>#gate{display:none!important}</style></noscript>
+    <script>
+    (function () {
+        var root = document.documentElement;
+        try {
+            if (sessionStorage.getItem('gateEntered')) {
+                root.classList.add('gate--passed');
+                return;
+            }
+        } catch (e) { /* 隐私模式拿不到 storage，走正常点击流程 */ }
+        var gate = document.getElementById('gate');
+        if (!gate) return;
+
+        /* 干支年款：按当前日期计算，立春（约 2/4）换年，三个月一季。
+           HTML 里的静态文字只是无 JS 时的兜底，正常都会被覆盖 */
+        (function () {
+            var el = document.getElementById('gate-year');
+            if (!el) return;
+            var now = new Date();
+            var y = now.getFullYear();
+            if (now.getMonth() === 0 || (now.getMonth() === 1 && now.getDate() < 4)) y -= 1;
+            var STEMS = '甲乙丙丁戊己庚辛壬癸';
+            var BRANCHES = '子丑寅卯辰巳午未申酉戌亥';
+            var stem = STEMS.charAt((y - 4) % 10);
+            var branch = BRANCHES.charAt((y - 4) % 12);
+            var m = now.getMonth() + 1;
+            var season = (m >= 3 && m <= 5) ? '春' : (m >= 6 && m <= 8) ? '夏' : (m >= 9 && m <= 11) ? '秋' : '冬';
+            el.textContent = stem + branch + '年 · ' + season + '月';
+        })();
+
+        gate.addEventListener('click', function (ev) {
+            var t = ev.target.closest('[data-gate-enter]');
+            if (!t) return;
+            try { sessionStorage.setItem('gateEntered', '1'); } catch (e) {}
+            root.classList.add('gate--open');
+        });
+
+        /* 星光尾迹：鼠标在门厅内移动时撒星。
+           节流（每 22px 最多一颗）+ 数量上限，粒子动画结束自行移除 */
+        var COLORS = ['#c9a227', '#8c3d2b', '#a8743a', '#b8860b'];
+        var lastX = 0, lastY = 0, alive = 0;
+        gate.addEventListener('pointermove', function (ev) {
+            if (ev.pointerType && ev.pointerType !== 'mouse') return; /* 手机触摸不撒星 */
+            var dx = ev.clientX - lastX, dy = ev.clientY - lastY;
+            if (dx * dx + dy * dy < 484) return; /* 挪动不足 22px 不生成 */
+            if (alive > 24) return;
+            lastX = ev.clientX; lastY = ev.clientY;
+            var s = document.createElement('span');
+            s.className = 'gate-sparkle';
+            s.textContent = '✦';
+            s.style.left = ev.clientX + 'px';
+            s.style.top = ev.clientY + 'px';
+            s.style.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+            s.style.fontSize = (9 + Math.random() * 9).toFixed(1) + 'px';
+            s.style.setProperty('--drift', (Math.random() * 28 - 14).toFixed(1) + 'px');
+            s.style.setProperty('--rot', (Math.random() * 180 - 90).toFixed(0) + 'deg');
+            gate.appendChild(s);
+            alive++;
+            s.addEventListener('animationend', function () { s.remove(); alive--; });
+        });
+    })();
+    </script>
+
+    {{- $paginator := partial "helper/paginator.html" . -}}
+
+    <section class="article-list">
+        {{ range $index, $element := $paginator.Pages }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+    </section>
+
+    {{- partial "pagination.html" . -}}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

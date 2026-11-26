@@ -979,3 +979,176 @@ html[data-scheme="dark"] .pagination .page-link.current {
 body:not(.article-page) .right-sidebar .widget-title {
     display: none;
 }
+
+/* ──────────────────────────────────────────────────────────
+   门厅（landing gate）：首页入场动画
+   配套模板 layouts/home.html。html 上的状态类：
+   - gate--passed：本会话已进入过，门厅不显示
+   - gate--open  ：点了「入斋」，播放揭幕动画
+   删除此块 + layouts/home.html 即可完全回滚。
+   ────────────────────────────────────────────────────────── */
+.gate {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--body-background, #ffffff);
+}
+
+.gate__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+}
+
+/* 坤卦 ☷：入场淡入，不旋转 */
+.gate__symbol {
+    color: var(--accent-color);
+    font-size: 58px;
+    line-height: 1;
+    animation: gate-fade-up 0.9s ease both;
+}
+
+/* 「闲人草·小鱼斋」逐字浮现 */
+.gate__title {
+    margin: 26px 0 0;
+    font-size: clamp(2.1rem, 5.2vw, 3.2rem);
+    /* 仿宋，笔画细所以字重加大保持存在感 */
+    font-family: "FangSong", "STFangsong", "FangSong_GB2312", "仿宋", serif;
+    font-weight: 700;
+    color: var(--card-text-color-main);
+    letter-spacing: 0.1em;
+    text-indent: 0.1em; /* 抵消末字的字距，让整体真正居中 */
+
+    span {
+        display: inline-block;
+        opacity: 0;
+        animation: gate-fade-up 0.7s ease both;
+
+        &:nth-child(1) { animation-delay: 0.35s; }
+        &:nth-child(2) { animation-delay: 0.45s; }
+        &:nth-child(3) { animation-delay: 0.55s; }
+        &:nth-child(4) { animation-delay: 0.65s; }
+        &:nth-child(5) { animation-delay: 0.75s; }
+        &:nth-child(6) { animation-delay: 0.85s; }
+        &:nth-child(7) { animation-delay: 0.95s; }
+    }
+}
+
+/* 题词一行，前后各一段小横线 */
+.gate__verse {
+    margin: 30px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* 仿宋：笔画瘦劲、带笔意，比黑体更配这行词 */
+    font-family: "FangSong", "STFangsong", "FangSong_GB2312", "仿宋", serif;
+    font-size: clamp(1.4rem, 2.2vw, 1.7rem);
+    letter-spacing: 0.04em;
+    color: var(--body-text-color);
+    white-space: nowrap;
+    opacity: 0;
+    animation: gate-fade-up 0.8s ease 1.15s both;
+
+    .gate__rule {
+        flex: none;
+        width: 11px; /* 减号长度 */
+        height: 1px;
+        background: currentColor;
+        opacity: 0.4;
+    }
+}
+
+/* 「入斋」按钮 */
+.gate__actions {
+    margin-top: 46px;
+    opacity: 0;
+    animation: gate-fade-up 0.8s ease 1.45s both;
+}
+
+.gate__enter {
+    padding: 12px 52px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    color: var(--accent-color);
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+    &:hover {
+        background: var(--accent-color);
+        color: #ffffff;
+    }
+}
+
+/* 干支年款：按钮下的小字牌记，最后浮现 */
+.gate__year {
+    margin: 18px 0 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.28em;
+    text-indent: 0.28em;
+    color: var(--card-text-color-tertiary);
+    opacity: 0;
+    animation: gate-fade-up 0.8s ease 1.75s both;
+}
+
+/* 星光尾迹：鼠标在门厅内移动时由 JS 撒下，上漂旋转淡出后自行移除 */
+.gate-sparkle {
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    line-height: 1;
+    text-shadow: 0 0 6px currentColor;
+    animation: gate-sparkle-out 1.1s ease-out forwards;
+}
+
+/* 揭幕：门厅淡出，内容轻微上浮进场 */
+html.gate--open {
+    .gate {
+        animation: gate-out 0.7s ease forwards;
+    }
+
+    .container.main-container {
+        animation: gate-main-in 0.8s ease both;
+    }
+}
+
+/* 已进入过（本会话）：立即放行，不播动画 */
+html.gate--passed .gate {
+    display: none;
+}
+
+@keyframes gate-fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gate-out {
+    from { opacity: 1; }
+    to   { opacity: 0; visibility: hidden; }
+}
+
+@keyframes gate-main-in {
+    from { opacity: 0.35; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gate-sparkle-out {
+    0%   { opacity: 0; transform: translate(0, 0) scale(0.4) rotate(0deg); }
+    20%  { opacity: 0.95; }
+    100% { opacity: 0; transform: translate(var(--drift, 0px), -20px) scale(1.05) rotate(var(--rot, 45deg)); }
+}
+
+/* 偏好减弱动效的用户：不设门，直接看内容 */
+@media (prefers-reduced-motion: reduce) {
+    .gate {
+        display: none !important;
+    }
+}
